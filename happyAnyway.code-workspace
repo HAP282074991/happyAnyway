@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "Specifications",
+      "path": "happyAnyway-specs"
+    },
+    {
+      "name": "Backend",
+      "path": "happyAnyway-api"
+    },
+    {
+      "name": "WeChat",
+      "path": "happyAnyway-wechat"
+    }
+  ],
+  "settings": {}
+}

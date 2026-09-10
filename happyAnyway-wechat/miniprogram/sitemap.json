@@ -1,0 +1,9 @@
+{
+  "desc": "Initial application",
+  "rules": [
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

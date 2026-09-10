@@ -1,0 +1,30 @@
+{
+  "appid": "touristappid",
+  "projectname": "happyAnyway",
+  "description": "Native TypeScript mini program",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "miniprogram/",
+  "setting": {
+    "es6": true,
+    "minified": true,
+    "postcss": true,
+    "urlCheck": true
+  },
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "suffix",
+        "value": ".ts"
+      },
+      {
+        "type": "suffix",
+        "value": ".map"
+      },
+      {
+        "type": "suffix",
+        "value": ".gitkeep"
+      }
+    ],
+    "include": []
+  }
+}

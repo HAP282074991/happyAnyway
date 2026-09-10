@@ -1,0 +1,3 @@
+# Local database development. Do not combine with the local (no-database) profile.
+server:
+  address: 127.0.0.1

@@ -1,0 +1,4 @@
+.page { padding: 48rpx 32rpx; }
+.card { background: #ffffff; border-radius: 24rpx; padding: 40rpx; }
+.title { display: block; font-size: 44rpx; font-weight: 600; }
+.description { display: block; margin-top: 20rpx; color: #64748b; font-size: 28rpx; }
