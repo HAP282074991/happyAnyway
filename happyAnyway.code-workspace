@@ -1,8 +1,8 @@
 {
   "folders": [
     {
-      "name": "Specifications",
-      "path": "happyAnyway-specs"
+      "name": "Project",
+      "path": "."
     },
     {
       "name": "Backend",

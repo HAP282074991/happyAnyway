@@ -1,9 +1,10 @@
 {
   "schemaVersion": 1,
-  "repository": "happyAnyway-specs",
-  "repositoryPath": "../happyAnyway-specs",
-  "remoteUrl": null,
+  "repository": "happyAnyway",
+  "repositoryPath": "..",
+  "remoteUrl": "https://github.com/HAP282074991/happyAnyway.git",
   "revision": null,
   "status": "bootstrap-unpinned",
-  "features": []
+  "features": [],
+  "documentsPath": "docs/requirements"
 }

@@ -37,7 +37,23 @@ API 规则中的分页、错误格式等是本轮提出的后续实现基线，�
 详细缺口见 [质量状态](quality.md)。不存在依赖秘密凭证内容的交接信息；凭证通过运行环境配置。
 
 ## 独立工作区迁移（2026-09-10）
-目标仓库路径：D:\AIProject\happyAnyway\happyAnyway-api。共同需求改从同级 happyAnyway-specs 读取，引用见 specs-reference.json，当前无规格提交。
+目标仓库路径：D:\AIProject\happyAnyway\happyAnyway-api。共同需求改从根目录 docs/requirements 读取，引用见 specs-reference.json，当前无规格提交。
 现有后端规则保留；本轮迁移结果以协调任务最终验证为准。
 
 迁移完成：新路径 Git 与内容校验成功，mvn verify 的 13 项测试通过（2026-09-10，未提交工作区）。共同规格可通过相对路径访问。原有历史验证记录保留，不作为当前在运行服务的声明。
+
+## 公共规则入口更新（2026-09-10）
+- 当前为根目录单一 Git 仓库，已有基线 f5f91ab；前文无 HEAD、独立仓库描述为历史状态。
+- 后端 AGENTS.md 新增根规则及统一流程入口，规格相对路径以本工程目录解析；工程实现规则未改变。
+- 本次只整理文档，规格链接检查通过，未重跑 Maven。当前先完成 Harness 验收，再开发业务。
+
+## 共享文档迁移（2026-09-10）
+- 需求统一位于根 docs/requirements，由项目经理维护；仅保留后端、微信两个执行 Agent。
+- specs-reference.json 的 repositoryPath 指向根仓库，documentsPath 指向 docs/requirements；当前仍未锁定规格提交。
+- 本轮只修改文档入口、引用配置及根文档检查脚本，未改业务代码或重跑 Maven；文档验证以根 docs/progress.md 最新记录为准。
+
+## 2026-09-11 部门 Harness 重造
+
+- 后端入口只保留本工程规范；岗位共性、交接、审核和测试结论格式以根 docs/workflow.md 为准。
+- 本轮未修改 Java、pom 或运行配置。根统一检查初次因联网权限无法解析父 POM；允许网络访问后 mvn verify 构建成功，13 项测试全部通过。
+- 以上由项目经理执行，不代表独立审核、独立测试或真实 MySQL 已完成。尚未创建本轮岗位任务，下一步见根 docs/progress.md。

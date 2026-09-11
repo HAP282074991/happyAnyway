@@ -1,5 +1,5 @@
 # 产品需求入口
 
-共同产品范围、业务功能和跨端验收统一维护在 [共享规格](../../../happyAnyway-specs/product/overview.md)。
+共同产品范围、业务功能和跨端验收统一维护在 [共享规格](../../../docs/requirements/overview.md)。
 采用版本见仓库根目录 specs-reference.json；当前未锁定提交，仅用于初始化。
 本目录只保留本端差异和实现说明，不复制共同业务规则。

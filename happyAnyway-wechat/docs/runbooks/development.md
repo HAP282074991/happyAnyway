@@ -1,9 +1,9 @@
 # 开发与验证
 
 1. 安装 Node.js 22+ 与微信开发者工具。
-2. 在仓库根目录执行 npm ci。
+2. 在 happyAnyway-wechat 工程目录执行 npm ci。
 3. 执行 npm run dev 持续编译，保持该终端运行。
-4. 导入本仓库根目录到微信开发者工具。
+4. 导入 happyAnyway-wechat 工程目录到微信开发者工具。
 5. 修改 miniprogram 下的 TypeScript/WXML/WXSS，不编辑生成的 JavaScript。
 6. 提交前执行 npm run verify，再按改动范围进行开发者工具与真机验收。
 
