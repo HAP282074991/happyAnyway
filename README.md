@@ -12,13 +12,13 @@
 ## 工程结构
 
 ```text
-AGENTS.md                       公共入口
+AGENTS.md                       根项目经理配置与公共入口
 README.md                       项目说明
 docs/
   requirements/                 产品设计维护的需求、交互与验收
   decisions/                    重要历史决定
   workflow.md                   部门协作流程
-  project-management.md         项目经理职责
+  agents/                       五个待招聘岗位的职责与边界
   agent-init.md                 岗位任务初始化
   progress.md                   项目进度与交付证据
 scripts/

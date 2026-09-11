@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const required = ['AGENTS.md', 'README.md', 'scripts/verify.ps1', 'happyAnyway-api/AGENTS.md', 'happyAnyway-wechat/AGENTS.md', 'docs/requirements/README.md', 'docs/requirements/analysis.md', 'docs/requirements/specification.md', 'docs/requirements/change-management.md', 'docs/requirements/overview.md', 'docs/requirements/roadmap.md', 'docs/requirements/contracts.md', 'docs/progress.md', 'docs/agent-init.md', 'docs/project-management.md', 'docs/workflow.md'];
+const required = ['AGENTS.md', 'README.md', 'scripts/verify.ps1', 'happyAnyway-api/AGENTS.md', 'happyAnyway-wechat/AGENTS.md', 'docs/requirements/README.md', 'docs/requirements/analysis.md', 'docs/requirements/specification.md', 'docs/requirements/change-management.md', 'docs/requirements/overview.md', 'docs/requirements/roadmap.md', 'docs/requirements/contracts.md', 'docs/progress.md', 'docs/agent-init.md', 'docs/agents/product-designer.md', 'docs/agents/backend-developer.md', 'docs/agents/wechat-developer.md', 'docs/agents/reviewer.md', 'docs/agents/tester.md', 'docs/workflow.md'];
 for (const path of required) {
   if (!existsSync(join(root, path))) throw new Error('Missing: ' + path);
 }
