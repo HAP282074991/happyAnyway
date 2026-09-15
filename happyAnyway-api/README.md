@@ -4,7 +4,7 @@ Java 21 + Spring Boot 3.5.16 + Maven，MyBatis 3.0.5、MySQL、Flyway、Spring S
 
 代码按 controller/service/mapper/entity/dto 分层，各层内再按业务模块划分。具体边界见 ARCHITECTURE.md。
 
-本机已安装 Maven 3.9.15。本次 Wrapper 下载请求未获批准，项目使用全局 mvn；其他电脑需安装 Maven。
+项目使用全局 Maven，执行前安装与 Java 21 兼容的 Maven；不依赖某台机器的安装位置。
 
 ## 无数据库启动
 
@@ -50,4 +50,4 @@ mvn verify
 ## Harness 入口
 
 接手先阅读 [交接记录](docs/HANDOFF.md)，按 [规则索引](docs/index.md) 加载开发、测试、审查、接口和数据库规范。
-专项规则的存在不代表全部自动执行；覆盖与历史验证见 [质量状态](docs/quality.md)。
+专项规则的存在不代表全部自动执行；覆盖与限制见 [质量状态](docs/quality.md)。

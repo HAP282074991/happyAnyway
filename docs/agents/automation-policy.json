@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "workflowPath": "docs/workflow.md",
+  "runtimePath": "docs/tasks/runtime.json",
+  "roles": {
+    "pm": {
+      "configPath": "AGENTS.md",
+      "writeScopes": [
+        "AGENTS.md",
+        "README.md",
+        "docs/agents/",
+        "docs/progress.md",
+        "docs/tasks/",
+        "docs/agent-init.md",
+        "docs/workflow.md",
+        "docs/decisions/",
+        "docs/lifecycle.md",
+        "docs/project-state.json",
+        "docs/baseline-manifest.json",
+        "docs/templates/"
+      ]
+    },
+    "product": {
+      "configPath": "docs/agents/product-designer.md",
+      "writeScopes": [
+        "docs/requirements/"
+      ]
+    },
+    "backend": {
+      "configPath": "docs/agents/backend-developer.md",
+      "writeScopes": [
+        "happyAnyway-api/"
+      ]
+    },
+    "wechat": {
+      "configPath": "docs/agents/wechat-developer.md",
+      "writeScopes": [
+        "happyAnyway-wechat/"
+      ]
+    },
+    "reviewer": {
+      "configPath": "docs/agents/reviewer.md",
+      "writeScopes": [
+        "docs/tasks/evidence/"
+      ]
+    },
+    "tester": {
+      "configPath": "docs/agents/tester.md",
+      "writeScopes": [
+        "docs/tasks/evidence/"
+      ]
+    }
+  }
+}

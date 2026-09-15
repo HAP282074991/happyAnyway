@@ -14,7 +14,7 @@ export default tseslint.config(
     ignores: ['miniprogram/platform/**/*.ts'],
     rules: {
       'no-restricted-syntax': ['error', {
-        selector: "MemberExpression[object.name='wx'][property.name='request']",
+        selector: "MemberExpression[object.name='wx'][computed=false][property.name='request'], MemberExpression[object.name='wx'][computed=true][property.value='request']",
         message: 'Network access belongs in platform; use the API wrapper.',
       }],
     },

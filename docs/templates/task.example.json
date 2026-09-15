@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "TASK-YYYYMMDD-NNN",
+  "title": "待填写",
+  "kind": "business",
+  "status": "draft",
+  "role": "backend",
+  "agentId": null,
+  "senderId": null,
+  "createdAt": null,
+  "workDirectory": null,
+  "baseCommit": null,
+  "source": "待填写",
+  "config": {
+    "path": "docs/agents/backend-developer.md",
+    "version": null,
+    "digest": null
+  },
+  "workflow": {
+    "path": "docs/workflow.md",
+    "version": null,
+    "digest": null
+  },
+  "dispatchSequence": "D001",
+  "instructions": "待填写任务编号、派工序号、记录路径与完整要求",
+  "writeScopes": [],
+  "artifactScopes": [],
+  "dependencies": [],
+  "specification": {
+    "approved": false,
+    "commit": null,
+    "approvalRecord": null
+  },
+  "acceptance": "待填写",
+  "verification": "待填写",
+  "estimate": "待填写",
+  "feedback": "待填写",
+  "outOfScope": "待填写",
+  "evidence": {}
+}

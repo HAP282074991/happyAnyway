@@ -48,6 +48,34 @@ test('absolute local paths and malformed encoding do not bypass validation', t =
   assert.throws(() => checkMarkdown(join(root, 'README.md'), '[x](bad%ZZ.md)'), /Invalid link encoding/);
 });
 
+test('nested list links and continuation paragraphs are checked', t => {
+  const root = fixture(t);
+  for (const text of [
+    '- parent\n    - [child](missing.md)',
+    '1. parent\n    1. child\n        - [deep](missing.md)',
+    '- parent\n\t- [child](missing.md)',
+    '- parent\n\n    [continuation](missing.md)',
+    '- parent\n    - child\n\n      [ref]: missing.md\n      [child][ref]',
+  ]) {
+    assert.throws(() => checkMarkdown(join(root, 'README.md'), text), /Broken link/, text);
+    assert.doesNotThrow(() => checkMarkdown(join(root, 'README.md'), text.replaceAll('missing.md', 'README.md')), text);
+  }
+});
+
+test('list code samples remain ignored and following links are checked', t => {
+  const root = fixture(t);
+  for (const text of [
+    '- parent\n\n      [code](missing.md)',
+    '- parent\n    - child\n\n          [code](missing.md)',
+    '- parent\n    - ```md\n      [code](missing.md)\n      ```',
+    '- parent\n\n    ~~~md\n    [code](missing.md)\n    ~~~',
+    '    - [code list](missing.md)',
+  ]) {
+    assert.doesNotThrow(() => checkMarkdown(join(root, 'README.md'), text), text);
+    assert.throws(() => checkMarkdown(join(root, 'README.md'), text + '\n\n[real](missing.md)'), /Broken link/, text);
+  }
+});
+
 test('reference schema, status, feature values and revision are validated', t => {
   const root = fixture(t);
   const path = join(root, 'happyAnyway-api', 'specs-reference.json');

@@ -1,0 +1,40 @@
+{
+  "algorithm": "sha256-utf8-lf-v1",
+  "entries": [
+    {
+      "path": "AGENTS.md",
+      "version": "PM-V2-20260915",
+      "digest": "9a47ba8731d00b04c2d1058e1321bc97b3377836bbd9b0b666fa65dd07602260"
+    },
+    {
+      "path": "docs/agents/product-designer.md",
+      "version": "PD-V5-20260915",
+      "digest": "b2fe51dec4f41025816f3e9314b259f2621ac5380bccd88d92b3f724ec42642a"
+    },
+    {
+      "path": "docs/agents/backend-developer.md",
+      "version": "BE-DRAFT-V4-20260915",
+      "digest": "48f264432fccf038698239059b5d632f754c474adb0d0f4505db1b7df4f22c59"
+    },
+    {
+      "path": "docs/agents/wechat-developer.md",
+      "version": "WX-DRAFT-V4-20260915",
+      "digest": "d6e0868b50fc95e148beeed233a03c5a87f9033e9cbf06d5fee5f33b0f57fb7d"
+    },
+    {
+      "path": "docs/agents/reviewer.md",
+      "version": "REVIEW-DRAFT-V3-20260915",
+      "digest": "09f39453bc1fb41d673b9eddf089b98d0710179fc91a7f7537893e4e5d77ce2c"
+    },
+    {
+      "path": "docs/agents/tester.md",
+      "version": "TEST-DRAFT-V4-20260915",
+      "digest": "744e3130e52f15545dab8cc531ab6b5db2858017eb505297e49ed9da93541f94"
+    },
+    {
+      "path": "docs/workflow.md",
+      "version": "WF-V3-20260915",
+      "digest": "ee15dba6dbf5610e20a02e617dc0e4d5b093d7950e5c6a5e5ba8882ddfdac768"
+    }
+  ]
+}

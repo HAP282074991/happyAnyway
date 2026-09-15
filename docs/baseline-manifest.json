@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "exclude": [
+    "docs/tasks/",
+    "docs/decisions/progress-history-20260913.md",
+    "docs/decisions/0001-multi-repository.md",
+    "happyAnyway-api/docs/exec-plans/active/",
+    "happyAnyway-api/docs/exec-plans/completed/",
+    "happyAnyway-wechat/docs/exec-plans/active/",
+    "happyAnyway-wechat/docs/exec-plans/completed/"
+  ],
+  "retain": ["docs/tasks/TEMPLATE.md"],
+  "resetTemplates": {
+    "docs/progress.md": "docs/templates/progress.md",
+    "docs/agent-init.md": "docs/templates/agent-init.md",
+    "happyAnyway-api/specs-reference.json": "docs/templates/specs-reference.json",
+    "happyAnyway-wechat/specs-reference.json": "docs/templates/specs-reference.json"
+  },
+  "emptyDirectories": [
+    "happyAnyway-api/docs/exec-plans/active",
+    "happyAnyway-api/docs/exec-plans/completed",
+    "happyAnyway-wechat/docs/exec-plans/active",
+    "happyAnyway-wechat/docs/exec-plans/completed"
+  ]
+}

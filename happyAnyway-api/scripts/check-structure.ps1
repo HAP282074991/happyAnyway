@@ -8,21 +8,7 @@ $required = @(
 foreach ($relative in $required) {
   if (-not (Test-Path -LiteralPath (Join-Path $projectRoot $relative) -PathType Leaf)) { throw "Missing: $relative" }
 }
-function Get-ProjectDocuments([string]$directory) {
-  foreach ($entry in Get-ChildItem -LiteralPath $directory -Force) {
-    if ($entry.Attributes -band [System.IO.FileAttributes]::ReparsePoint) { continue }
-    if ($entry.PSIsContainer) {
-      if ($entry.Name -notin @('.git', 'target')) { Get-ProjectDocuments $entry.FullName }
-    } elseif ($entry.Extension -eq '.md') { $entry }
-  }
-}
-$documents = @(Get-ProjectDocuments $projectRoot)
-foreach ($document in $documents) {
-  $content = Get-Content -LiteralPath $document.FullName -Raw -Encoding UTF8
-  foreach ($match in [regex]::Matches($content, '\[[^\]]+\]\(([^)]+)\)')) {
-    $target = $match.Groups[1].Value.Split('#')[0]
-    if (-not $target -or $target -match '^[a-zA-Z]+:' -or $target.StartsWith('/')) { continue }
-    if (-not (Test-Path -LiteralPath (Join-Path $document.DirectoryName $target))) { throw "Broken link in $($document.FullName): $target" }
-  }
-}
+# Use the same Markdown parser as the root and WeChat checks. Requires Node.js 22+.
+& node (Join-Path $projectRoot '../scripts/check-docs.mjs') --markdown-tree $projectRoot
+if ($LASTEXITCODE -ne 0) { throw "Markdown checks exited with $LASTEXITCODE" }
 Write-Output 'PASS: Harness required files and local Markdown links (not semantic or application validation).'
